@@ -1,0 +1,20 @@
+
+<span style="color:#67C44F;"><%=flash[:created]%></span>
+
+<span style="color:#67C44F;"><%=flash[:notice]%></span>
+
+<div class="show-text">
+	<h3>タイトル：
+		<%= @books.title %>
+	</h3>
+</div>
+<div class="show-text">
+	<h3>感想：
+		<%= @books.body %>
+	</h3>
+</div>
+	<%= link_to "編集", edit_book_path(@books),class: "edit_#{@books.id}" %>
+	<span>|</span>
+	<%= link_to "戻る", books_path(@books),class: "back" %>
+
+

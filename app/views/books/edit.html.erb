@@ -1,0 +1,20 @@
+<h1>編集</h1>
+
+<%= form_for(@books) do |f|%>
+
+<div class="edit-text">
+	<h4>タイトル</h4>
+	<%= f.text_field :title,class: "book_title" %>
+</div>
+<div class="edit-text">
+<h4>感想</h4>
+<%= f.text_area :body,class: "book_body" %>
+</div>
+<div class="edit-text">
+<%= f.submit "更新する" %>
+</div>
+<% end %>
+
+<%= link_to "詳細", book_path(@books),class: "show_#{@books.id}" %>
+<span>|</span>
+<%= link_to "戻る", books_path(@books),class: "back" %>
